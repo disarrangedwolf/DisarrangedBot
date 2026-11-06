@@ -1,0 +1,22 @@
+# Copy to /etc/systemd/system/all-in-one-bot.service
+[Unit]
+Description=All-in-one Discord bot and dashboard
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=discordbot
+WorkingDirectory=/opt/all-in-one-bot
+ExecStart=/usr/bin/node index.js
+Restart=always
+RestartSec=5
+Environment=NODE_ENV=production
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=true
+ReadWritePaths=/opt/all-in-one-bot
+
+[Install]
+WantedBy=multi-user.target

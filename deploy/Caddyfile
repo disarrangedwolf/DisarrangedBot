@@ -1,0 +1,5 @@
+# Replace with your own subdomain. Caddy gets and renews the HTTPS certificate automatically.
+bot.example.com {
+	encode gzip
+	reverse_proxy 127.0.0.1:3000
+}

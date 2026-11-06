@@ -1,0 +1,14 @@
+{
+  "name": "all-in-one-bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": { "start": "node index.js",
+    "backup": "node backup.js" },
+  "dependencies": {
+    "better-sqlite3": "^11.0.0",
+    "discord.js": "^14.16.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "fast-xml-parser": "^4.5.0"
+  }
+}
